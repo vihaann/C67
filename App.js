@@ -58,8 +58,10 @@ export default class App extends React.Component {
             Alert.alert("The word does not exist in our database");
           }}>
           <Text style={styles.buttonText}>GO</Text>
-        </TouchableOpacity>
-        <View>
+        </TouchableOpacity> 
+        <View style={{
+          flexDirection:"row",alignSelf:"center"
+        }}>
           {this.state.chunks.map((item, index) => {
             return (
               <PhonicSoundButton
@@ -69,7 +71,7 @@ export default class App extends React.Component {
               />
             );
           })}
-        </View>
+        </View>  
       </View>
     );
   }
@@ -86,8 +88,9 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     height: 40,
     textAlign: 'center',
-    borderWidth: 4,
+    borderWidth: 2,
     outline: 'none',
+    borderRadius:20
   },
   goButton: {
     width: '50%',
